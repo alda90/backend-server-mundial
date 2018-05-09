@@ -1,0 +1,9 @@
+{
+    "name": "backend-server",
+    "description": "Servidor Backend Mundial",
+    "repository": "https://github.com/alda90/backend-server-mundial.git",
+    "logo": "",
+    "keywords": ["node", "express", "static"],
+    "image": ""
+
+}
