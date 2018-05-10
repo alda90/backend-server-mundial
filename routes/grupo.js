@@ -14,8 +14,6 @@ app.get('/', (req, res, next) => {
     desde = Number(desde);
 
     Grupo.find({})
-        .skip(desde)
-        .limit(5)
         .exec(
             (err, grupo) => {
                 if (err) {
