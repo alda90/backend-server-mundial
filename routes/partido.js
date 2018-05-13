@@ -14,8 +14,8 @@ app.get('/', (req, res, next) => {
     desde = Number(desde);
 
     Partido.find({})
-        .populate('local', 'pais')
-        .populate('visitante', 'pais')
+        .populate('local', 'pais bandera')
+        .populate('visitante', 'pais bandera')
         .populate('grupo', 'grupo')
         .populate('estadio', 'estadio')
         .exec(
