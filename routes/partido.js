@@ -104,7 +104,7 @@ app.post('/fecha', (req, res, next) => {
                 Partido.count({}, (err, conteo) => {
                     res.status(200).json({
                         ok: true,
-                        partido: JSON.stringify(partido),
+                        partido: partido,
                         total: conteo
                     });
                 })
