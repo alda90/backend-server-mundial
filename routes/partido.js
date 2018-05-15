@@ -88,7 +88,7 @@ app.post('/fecha', (req, res, next) => {
 
     Partido.find({ fecha: fecha })
         .populate('local', 'pais tecnico bandera')
-        // .populate('visitante', 'pais tecnico bandera')
+        .populate('visitante', 'pais tecnico bandera')
         // .populate('grupo', 'grupo')
         // .populate('estadio', 'estadio')
         .exec(
