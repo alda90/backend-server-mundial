@@ -50,9 +50,9 @@ app.post('/partido', (req, res, next) => {
     var partido = body.partido;
 
     Incidencia.find({ partido: partido })
-        .populate('sustituto', 'nombre')
-        .populate('jugador', 'nombre')
-        .populate('tecnico', 'nombre')
+        //.populate('sustituto', 'nombre')
+        //.populate('jugador', 'nombre')
+        //.populate('tecnico', 'nombre')
         .exec(
             (err, incidencia) => {
                 if (err) {
