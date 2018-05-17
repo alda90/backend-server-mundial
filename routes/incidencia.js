@@ -92,7 +92,8 @@ app.post('/', (req, res) => {
             numpenal: body.numpenal,
             partido: body.partido,
             jugador: body.jugador,
-            sustituto: body.sustituto
+            sustituto: body.sustituto,
+            tecnico: 0
         });
 
     }
