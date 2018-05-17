@@ -85,50 +85,15 @@ app.post('/', (req, res) => {
 
     var body = req.body;
 
-    if (body.jugador != '' && body.sustituto != '') {
-        var incidencia = new Incidencia({
-            incidencia: body.incidencia,
-            minuto: body.minuto,
-            numpenal: body.numpenal,
-            partido: body.partido,
-            jugador: body.jugador,
-            sustituto: body.sustituto,
-            tecnico: 0
-        });
-
-    }
-
-    if (body.jugador != '' && body.sustituto === '') {
-        var incidencia = new Incidencia({
-            incidencia: body.incidencia,
-            minuto: body.minuto,
-            numpenal: body.numpenal,
-            partido: body.partido,
-            jugador: body.jugador
-        });
-
-    }
-
-    if (body.tecnico != '') {
-        var incidencia = new Incidencia({
-            incidencia: body.incidencia,
-            minuto: body.minuto,
-            numpenal: body.numpenal,
-            partido: body.partido,
-            tecnico: body.tecnico
-        });
-
-    }
-
-    if (body.jugador === '' && body.sustituto === '' && body.tecnico === '') {
-        var incidencia = new Incidencia({
-            incidencia: body.incidencia,
-            minuto: body.minuto,
-            numpenal: body.numpenal,
-            partido: body.partido
-        });
-
-    }
+    var incidencia = new Incidencia({
+        incidencia: body.incidencia,
+        minuto: body.minuto,
+        numpenal: body.numpenal,
+        partido: body.partido,
+        jugador: body.jugador,
+        sustituto: body.sustituto,
+        tecnico: body.tecnico
+    });
 
 
     incidencia.save((err, incidenciaGuardado) => {
