@@ -51,7 +51,7 @@ app.post('/partidopais', (req, res, next) => {
     var pais = body.idpais;
 
     Alineacion.find({ partido: partido, pais: pais })
-        .populate('jugador', 'nombre posicion')
+        .populate('jugador', 'nombre posicion numero img')
         .populate('pais', 'pais')
         .exec(
             (err, alineacion) => {
