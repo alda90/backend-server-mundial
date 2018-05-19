@@ -10,12 +10,9 @@ var Estadistica = require('../models/estadistica');
 
 app.get('/', (req, res, next) => {
 
-    var desde = req.query.desde || 0;
-    desde = Number(desde);
-
     Estadistica.find({})
-        .skip(desde)
-        .limit(5)
+        .populate('pais', 'pais bandera')
+        .populate('grupo', 'grupo')
         .exec(
             (err, estadistica) => {
                 if (err) {
