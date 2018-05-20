@@ -14,8 +14,6 @@ app.get('/', (req, res, next) => {
     desde = Number(desde);
 
     Sede.find({})
-        .skip(desde)
-        .limit(5)
         .exec(
             (err, sede) => {
                 if (err) {
